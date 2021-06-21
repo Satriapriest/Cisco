@@ -1,0 +1,16 @@
+---Dynamic Trunking Protocol Table---
+
+                     |   Dynamic Auto   |   Dynamic Desirable   |  Trunk                 |  Access
+                     -------------------------------------------------------------------------------------------------
+Dynamic Auto         |   Access         |   Trunk               |  Trunk                 |  Access
+Dynamic Desirable    |   Trunk          |   Trunk               |  Trunk                 |  Access
+Trunk                |   Trunk          |   Trunk               |  Trunk                 |  Limited Connectivity
+Access               |   Acess          |   Access              |  Limited Connectivity  |  Access
+
+By default all port is dynamic auto.
+
+---CONFIGURATION---
+enable
+configure terminal
+inteface gig0/1
+switchport mode dynamic desirable / dynamic auto 
