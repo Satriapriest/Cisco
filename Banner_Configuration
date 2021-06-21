@@ -1,0 +1,22 @@
+---BANNER MOTD---
+enable
+configure terminal
+banner motd $
+---------**FOR YOUR INFORMATION**-----------
+| DON'T FORGET TO BACKUP THE CONFIGURATION  |
+--------------------------------------------
+$
+
+---BANNE LOGIN---
+enable
+configure terminal
+banner login #
+-----------------------** SECURITY NOTICE ** ------------------------
+| This system is intended to be used solely by authorized users,     |
+| of legitimate corporate business. Users are monitored to the       |
+| extent necessary to properly administer the system and to          |
+| investigate unauthorized access or use. By accessing this system,  |
+| you are consenting to this monitoring. Unauthorized use is subject |
+| to prosecution                                                     |
+----------------------------------------------------------------------
+#
