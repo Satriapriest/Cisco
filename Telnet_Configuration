@@ -17,8 +17,8 @@ interface gig0/1
 switchport mode access
 switchport access vlan 10
 
-
----NO USERNAME---
+---TELNET CONFIGURATION---
+---WITHOUT USERNAME---
 enable
 configure terminal
 line vty 0 4
