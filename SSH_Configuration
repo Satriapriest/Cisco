@@ -30,3 +30,7 @@ ip ssh version 2              (THE MODULUS SIZE MUST BE AT LEAST 768 BITS FOR SS
 line vty 0 4
 login local
 transport input ssh
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+YOU MUST CONFIGURE ENABLE PASSWORD OR SECRET
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
