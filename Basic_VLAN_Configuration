@@ -1,1 +1,55 @@
+---CREATE VLAN IN PRIVILEGED MODE---
+enable
+vlan database
+vlan 10 name IT
+vlan 11 name Finance
+vlan 12 name BOD
+exit
+configure terminal
+interface gig0/1
+switchport mode access
+switchport access vlan 10
+interface gig0/2
+switchport mode access
+switchport access vlan 11
 
+---CREATE VLAN IN GLOBAL MODE---
+enable
+configure terminal
+vlan 10 
+name IT
+vlan 11 
+name Finance
+vlan 12
+name BOD
+interface gig0/1
+switchport mode access
+switchport access vlan 10
+interface gig0/2
+switchport mode access
+switchport access vlan 11
+
+---CREATE VLAN IN GLOBAL INTERFACES MODE---
+enable
+configure terminal
+interface gig0/1
+switchport mode access
+switchport access vlan 10
+interface gig0/2
+switchport mode access
+switchport access vlan 11
+
+---DELETE VLAN ON INTERFACES---
+enable
+configure terminal
+interface gig0/1
+no switchport access vlan 10
+interface gig0/2
+no switchport access vlan 11
+
+---DELETE VLAN FROM SWITCH---
+enable
+configure terminal
+no vlan 10
+no vlan 11
+no vlan 12
