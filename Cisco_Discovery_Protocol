@@ -1,0 +1,14 @@
+---CISCO DISCOVERY PROTOCOL---
+enable
+show cdp neighbor         (TO DISPLAY NEIGHBOR SWITCHES)
+show cdp                  (TO DISPLAY INFOMARTION OF CDP)
+
+---DISABLE CDP IN GLOBAL MODE---
+enable
+no cdp run
+
+---DISABLE CDP IN GLOBAL INTERFACE MODE---
+enable
+configure terminal
+interface gig0/1
+no cdp enable
