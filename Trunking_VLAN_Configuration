@@ -1,1 +1,30 @@
+---BASIC TRUNKING VLAN---
+enable
+configure terminal
+interface gig0/1
+switchport mode trunk
 
+---TRUNKING VLAN WITH NATIVE VLAN---
+enable
+configure terminal
+vlan 99
+name Native
+inteface gig0/1
+switchport mode trunk
+switchport trunk native vlan 99
+
+---TRUNKING VLAN WITH NATIVE & ALLOWED VLAN---
+enable
+configure terminal
+vlan 10
+name IT
+vlan 11
+name Finance
+vlan 12
+name BOD
+vlan 99
+name Native
+interface gig0/1
+switchport mode trunk
+switchport trunk native 99
+switchport allowed vlan 10,11,99
