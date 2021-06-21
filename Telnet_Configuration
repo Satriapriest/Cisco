@@ -1,0 +1,29 @@
+---INITIAL CONFIGURATION---
+enable
+configure terminal
+interface gig0/1 
+ip address 10.10.10.1 255.255.255.0
+no shutdown
+
+---NO USERNAME---
+enable
+configure terminal
+line vty 0 4
+password P@ssw0rd_telnet
+login
+transport input telnet
+exit
+enable password P@ssw0rd_enable
+
+---WITH USERNAME---
+enable
+configure terminal
+username root password P@ssw0rd_telnet
+line vty 0 4
+login local
+transport input telnet
+enable password P@ssw0rd_enable
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+YOU MUST CONFIGURE ENABLE PASSWORD OR SECRET
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
