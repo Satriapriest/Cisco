@@ -1,0 +1,32 @@
+--INITIAL SETUP ON l3 DEVICE---
+enable
+configure terminal
+interface gig0/1 
+ip address 10.10.10.1 255.255.255.0
+no shutdown
+
+---INITIAL SETUP ON L2 DEVICE---
+enable
+configure terminal
+vlan 10
+interface vlan 10
+no shutdown
+ip address 10.10.10.1 255.255.255.0
+exit
+interface gig0/1
+switchport mode access
+switchport access vlan 10
+
+---SSH CONFIGURATION---
+enable
+configure terminal
+hostname SW-CORE              (YOU MUST CREATE THE HOSTNAME TO CONFIGURE SSH)
+ip domain-name cisco.com      (YOU MUST ADDED THE DNS TO CONFIGURE SSH)
+username root password P@ssw0rd_ssh
+enable password P@ssw0rd_enable
+crypto key generate rsa
+???HOW MANY BITS IN THE MODULUS [512]: 768
+ip ssh version 2              (THE MODULUS SIZE MUST BE AT LEAST 768 BITS FOR SSH VERSION 2)
+line vty 0 4
+login local
+transport input ssh
