@@ -1,4 +1,4 @@
---INITIAL SETUP ON l3 DEVICE---
+--INITIAL SETUP ON L3 DEVICE---
 enable
 configure terminal
 interface gig0/1 
