@@ -1,4 +1,7 @@
 ---Spanning Tree Protocol---
+Spanning Tree Protocol (STP) is a Layer 2 protocol that runs on bridges and switches. The specification for STP is IEEE 802.1D. 
+The main purpose of STP is to ensure that you do not create loops when you have redundant paths in your network. Loops are deadly to a network.
+
 1. By default the priority value of STP is 32768 plus VLAN 1 (Depending on the VLAN ID used).
 2. The switch will select the path that has the lowest cost. 
 If there is a path that has the highest value cost, it will be blocked and become an alternative path (Blocking port).
