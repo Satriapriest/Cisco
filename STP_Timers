@@ -1,0 +1,28 @@
+---Hello Time---
+The hello time is the time between each bridge protocol data unit (BPDU) that is sent on a port. 
+This time is equal to 2 seconds (sec) by default, but you can tune the time to be between 1 and 10 sec.
+
+enable
+configure terminal
+spanning-tree vlan 1 hello-time 5
+
+---Forward Time / Delay---
+The forward delay is the time that is spent in the listening and learning state. 
+This time is equal to 15 sec by default, but you can tune the time to be between 4 and 30 sec.
+
+enable
+configure terminal
+spanning-tree vlan 1 forward-time 5
+
+---Max Age---
+The max age timer controls the maximum length of time that passes before a bridge port saves its configuration BPDU information. 
+This time is 20 sec by default, but you can tune the time to be between 6 and 40 sec.
+
+enable
+configure terminal
+spanning-tree vlan 1 max-age 10
+
+Each configuration BPDU contains these three parameters. In addition, each BPDU configuration contains another time-related parameter that is known as the message age. 
+The message age is not a fixed value. The message age contains the length of time that has passed since the root bridge initially originated the BPDU. 
+The root bridge sends all its BPDUs with a message age value of 0, and all subsequent switches add 1 to this value. 
+Effectively, this value contains the information on how far you are from the root bridge when you receive a BPDU.
