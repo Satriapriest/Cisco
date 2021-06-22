@@ -1,0 +1,15 @@
+---Spanning Tree Protocol---
+1. By default the priority value of STP is 32768 plus VLAN 1 (Depending on the VLAN ID used).
+2. The switch will select the path that has the lowest cost. 
+If there is a path that has the highest value cost, it will be blocked and become an alternative path (Blocking port).
+
+---Speed Table Per-interfaces---
+Link Speed      Cost (Revised IEEE Specification)       Cost (Previous IEEE Specification) 
+10  Gb/s        2                                       1
+1   Gb/s        4                                       1
+100 Mb/s        19                                      10
+10  Mb/s        100                                     100
+
+---Check Information of STP---
+enable
+show spanning-tree
