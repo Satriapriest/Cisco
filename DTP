@@ -1,4 +1,6 @@
 ---Dynamic Trunking Protocol Table---
+The Dynamic Trunking Protocol (DTP) is used to negotiate forming a trunk between two Cisco devices. 
+DTP causes increased traffic, and is enabled by default, but may be disabled.
 
                      |   Dynamic Auto   |   Dynamic Desirable   |  Trunk                 |  Access
                      -------------------------------------------------------------------------------------------------
