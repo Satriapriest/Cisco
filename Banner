@@ -7,7 +7,7 @@ banner motd $
 --------------------------------------------
 $
 
----BANNE LOGIN---
+---BANNER LOGIN---
 enable
 configure terminal
 banner login #
