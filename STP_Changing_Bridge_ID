@@ -1,0 +1,18 @@
+---SPANNING-TREE CHANGING BRIDGE ID---
+
+You can also change the priority of a port to make it the root port. When the spanning tree topology is based on default parameters, 
+the path between the source and the destination stations in a switched network might not be ideal. The goal is to make the fastest link the root port, 
+connecting higher-speed links to a port that has a higher number than the current root port can cause a root-port change.
+
+---CONFIGURE WITH ROOT PRIMARY & SECONDARY---
+enable
+configure terminal
+spanning-tree vlan 1 root primary
+spanning-tree vlan 1 root secondary
+
+---CONFIGURE WITH PRIORITY VALUE---
+enable
+configure terminal
+spanning-tree vlan 1 priority 4096
+
+Note: Priority values are calculated in multiples of 16.
