@@ -1,0 +1,23 @@
+---SPANNING-TREE PORTFAST---
+PortFast causes a switch or trunk port to enter the spanning tree forwarding state immediately, bypassing the listening and learning states.
+You can use PortFast on switch or trunk ports that are connected to a single workstation, switch, or server to allow those devices to connect to the network immediately, 
+instead of waiting for the port to transition from the listening and learning states to the forwarding state.
+
+CAUTION: You can use PortFast to connect a single end station or a switch port to a switch port. If you enable PortFast on a port that is connected to another Layer 2 device, 
+such as a switch, you might create network loops.
+
+When the switch powers up, or when a device is connected to a port, the port enters the spanning tree listening state. When the Forward Delay timer expires, 
+the port enters the learning state. When the Forward Delay timer expires a second time, the port is transitioned to the forwarding or blocking state. 
+When you enable PortFast on a switch or trunk port, the port is immediately transitioned to the spanning tree forwarding state.
+
+---CONFIGURE IN GLOBAL MODE---
+enable
+configure terminal
+spanning-tree portfast default / spanning-tree vlan 1 portfast default
+
+---CONFIGURE IN GLOBAL INTERFACE MODE---
+enable
+configure terminal
+interface gig0/1
+spanning-tree portfast
+
