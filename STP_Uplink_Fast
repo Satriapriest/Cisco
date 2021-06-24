@@ -2,7 +2,7 @@ The UplinkFast feature is based on the definition of an uplink group. On a given
 the uplink group consists in the root port and all the ports that provide an alternate connection to the root bridge.
 If the root port fails, which means if the primary uplink fails, a port with next lowest cost from the uplink group is selected to immediately replace it.
 
----CONFIGURE  STP UPLINK FAST---
+---CONFIGURATION---
 enable
 configure terminal
 spanning-tree uplinkfast
