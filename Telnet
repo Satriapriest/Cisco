@@ -37,6 +37,7 @@ login local
 transport input telnet
 enable password P@ssw0rd_enable
 
+
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 YOU MUST CONFIGURE ENABLE PASSWORD OR SECRET
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
