@@ -1,4 +1,4 @@
-Note:
+Notes:
 When used, backbone fast must be enabled on all switches in the network because backbone fast requires the use of the RLQ Request and Reply mechanism in order to inform switches of root path stability. 
 The RLQ protocol is active only when backbone fast is enabled on a switch. In addition, the network can also run into issues with RLQ flooding, 
 if backbone fast is not enabled on all switches. By default, backbone fast is disabled.
