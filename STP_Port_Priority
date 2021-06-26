@@ -1,0 +1,9 @@
+Notes:
+Generally, port-priority is used as a tie-breaker in various stages of the spanning-tree protocol algorithm 
+which ultimately determines which ports are in the forwarding state and which ports are in the blocking state.  
+
+---CONFIGURATION---
+enable
+configure terminal
+interface gig0/1
+spanning-tree vlan 1 port-priority 
