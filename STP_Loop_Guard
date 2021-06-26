@@ -1,0 +1,23 @@
+Notes:
+The STP loop guard feature provides additional protection against Layer 2 forwarding loops (STP loops). 
+An STP loop is created when an STP blocking port in a redundant topology erroneously transitions to the forwarding state.
+his usually happens because one of the ports of a physically redundant topology (not necessarily the STP blocking port) no longer receives STP BPDUs. In its operation,
+STP relies on continuous reception or transmission of BPDUs based on the port role. The designated port transmits BPDUs, and the non-designated port receives BPDUs.
+
+When one of the ports in a physically redundant topology no longer receives BPDUs, the STP conceives that the topology is loop free. Eventually, 
+the blocking port from the alternate or backup port becomes designated and moves to a forwarding state. This situation creates a loop.
+
+The loop guard feature makes additional checks. If BPDUs are not received on a non-designated port, and loop guard is enabled, 
+that port is moved into the STP loop-inconsistent blocking state, instead of the listening / learning / forwarding state. 
+Without the loop guard feature, the port assumes the designated port role. The port moves to the STP forwarding state and creates a loop.
+
+---CONFIGURE ON GLOBAL INTERFACES MODE---
+enable
+configure terminal
+interface gig0/1
+spanning-tree guard loop
+
+---CONFIGURE ON GLOBAL MODE---
+enable
+configure terminal
+spanning-tree loopguard default
