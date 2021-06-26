@@ -1,0 +1,11 @@
+Notes:
+The stp port cost command is used to set the path cost for the current port. When you need to realize the VLAN load sharing function, 
+and to set proper path cost to enable different VLAN traffic to be forwarded along different physical links, run this command. After the path cost for the current port is set, 
+topology may be changed and the spanning tree may be recalculated.
+
+---CONFIGURATION---
+enable
+configure terminal
+interface gig0/1
+spanning-tree cost 1
+
