@@ -31,6 +31,7 @@ line vty 0 4
 login local
 transport input ssh
 
+
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 YOU MUST CONFIGURE ENABLE PASSWORD OR SECRET
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
