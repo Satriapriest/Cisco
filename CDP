@@ -1,4 +1,4 @@
----CISCO DISCOVERY PROTOCOL---
+Notes:
 CDP is a Cisco proprietary protocol that is used for collecting directly connected neighbor device information like hardware, software, device name details and many more.
 
 enable
