@@ -1,25 +1,24 @@
-Notes:
+Note:
 The STP PortFast BPDU guard enhancement allows network designers to enforce the STP domain borders and keep the active topology predictable. 
 The devices behind the ports that have STP PortFast enabled are not able to influence the STP topology. At the reception of BPDUs, 
 the BPDU guard operation disables the port that has PortFast configured. The BPDU guard transitions the port into errdisable state, and a message appears on the console.
 
----CONFIGURATIOn ON GLOBAL INTERFACES MODE---
+---COMMAND ON GLOBAL INTERFACES MODE---
 enable
 configure terminal
 interface gig0/1
 spanning-tree bpduguard enable
 
----CONFIGURATIONN ON GLOBAL MODE---
+---COMMAND ON GLOBAL CONFIG MODE---
 enable
 configure terminal
 spanning-tree portfast bpduguard default
 
-Notes:
+Note:
 You can reactivate the blocking port it more quickly with the following command
 
----CONFIGURATION---
+---COMMAND---
 enable
 configure terminal
 errdisable recovery cause bpduguard
 errdisable recovery internal 30
-
