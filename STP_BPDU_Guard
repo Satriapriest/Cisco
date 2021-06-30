@@ -1,0 +1,6 @@
+Notes:
+The STP PortFast BPDU guard enhancement allows network designers to enforce the STP domain borders and keep the active topology predictable. 
+The devices behind the ports that have STP PortFast enabled are not able to influence the STP topology. At the reception of BPDUs, 
+the BPDU guard operation disables the port that has PortFast configured. The BPDU guard transitions the port into errdisable state, and a message appears on the console.
+
+---CONFIGURATION---
