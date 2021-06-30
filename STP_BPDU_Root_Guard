@@ -1,0 +1,16 @@
+Note:
+The administrator can set the root bridge priority to 0 in an effort to secure the root bridge position. 
+But there is no guarantee against a bridge with a priority of 0 and a lower MAC address.
+
+The root guard feature provides a way to enforce the root bridge placement in the network.
+
+The root guard ensures that the port on which root guard is enabled is the designated port. Normally, root bridge ports are all designated ports, 
+unless two or more ports of the root bridge are connected together. If the bridge receives superior STP Bridge Protocol Data Units (BPDUs) on a root guard-enabled port,
+root guard moves this port to a root-inconsistent STP state. This root-inconsistent state is effectively equal to a listening state.
+No traffic is forwarded across this port. In this way, the root guard enforces the position of the root bridge.
+
+---COMMAND---
+enable
+configure terminal
+interface gig0/1
+spanning-tree guard root
