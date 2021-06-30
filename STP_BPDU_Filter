@@ -1,0 +1,14 @@
+Note:
+The STP BPDU filter feature allows control of spanning tree participation on a per-port basis. It can be used to exclude specific ports from becoming part of spanning tree 
+operations. A port with the BPDU filter enabled will ignore incoming BPDU packets and stay locked in the spanning tree forwarding state. All other ports will maintain their role.
+
+---COMMAND ON GLOBAL CONFIG MODE---
+enable
+configure terminal
+spanning-tree portfast bpdufilter default
+
+---COMMAND ON GLOBAL INTERFACE MODE---
+enable
+configure terminal
+interface gig0/1
+spanning-tree bpdufilter default
