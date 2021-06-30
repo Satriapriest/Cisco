@@ -1,0 +1,11 @@
+Note:
+This value is the maximum number of bridges between any two points of attachment of end stations. 
+The IEEE recommendation is to consider a maximum diameter of seven bridges for the default STP timers.
+
+---COMMAND---
+enable
+configure terminal
+spanning-tree vlan 1 root primary diamater 5  
+
+Note: 
+(2-7) Maximum number of bridges between any two end noted
